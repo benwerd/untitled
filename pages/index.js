@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { getAllChapterSlugs } from '../lib/chapters'
+import {getAllChapters, getAllChapterSlugs} from '../lib/chapters'
 import ChapterList from '../components/ChapterList'
 import { title, description } from '../lib/constants'
+import {buildRSS} from "../lib/feed";
 
 export default function Home({ chapters }) {
   return (
@@ -32,7 +33,7 @@ export default function Home({ chapters }) {
                     <a>Subscribe by Email</a>
                 </Link>
                 {' '}|{' '}
-                <Link href='#'>
+                <Link href='/rss.xml'>
                     <a>RSS</a>
                 </Link>
                 {' '}|{' '}
@@ -48,9 +49,10 @@ export default function Home({ chapters }) {
 }
 
 export async function getStaticProps() {
-  return {
-    props: {
-      chapters: getAllChapterSlugs(),
+    buildRSS(getAllChapters())
+    return {
+        props: {
+            chapters: getAllChapterSlugs(),
+        }
     }
-  }
 }

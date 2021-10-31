@@ -11,7 +11,7 @@ export default function Faq() {
                 </title>
                 <meta name='description' content={description} />
             </Head>
-            <section class='faq'>
+            <section className='faq'>
                 <h1>
                     FAQ
                 </h1>
@@ -23,7 +23,7 @@ export default function Faq() {
                     {' '}
                     <a href='https://artisanal-artisan-3527.ck.page/ac21d80aa1'>email</a>,
                     {' '}
-                    <a href=''>RSS</a>,
+                    <a href='/rss.xml'>RSS</a>,
                     {' '}
                     or even by following
                     {' '}

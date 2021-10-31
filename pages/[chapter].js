@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
-import marked from 'marked'
 import { getAllChapters, getChapterBySlug } from '../lib/chapters'
 import Chapter from '../components/Chapter'
 import Head from 'next/head'
@@ -28,7 +27,6 @@ export default function ChapterPage({ chapterData }) {
 
 export async function getStaticProps({ params }) {
     const chapterData = getChapterBySlug(params.chapter)
-    chapterData.html = marked(chapterData.content).toString()
 
     return {
         props: {
