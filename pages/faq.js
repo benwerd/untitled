@@ -68,7 +68,7 @@ export default function Faq() {
                     So there&rsquo;s no business model?
                 </h2>
                 <p>
-                    Absolutely not. In fact, it&rsquo;s released under a Creative Commons license, so you could take the text and sell it yourself (as long as you include author attribution). If you feel like you should spend some money somewhere,
+                    Absolutely not. In fact, it&rsquo;s released under a Creative Commons license, so you could take the text and sell it yourself (as long as you include author attribution and release under the same license). If you feel like you should spend some money somewhere,
                     {' '}
                     <Link href='https://werd.io/content/all/?q=fairness+friday'>
                         <a>check out my Fairness Friday posts</a>
