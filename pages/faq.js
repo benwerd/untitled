@@ -49,6 +49,12 @@ export default function Faq() {
                     It&rsquo;s in the spirit of NaNoWriMo, but is likely to extend beyond it. I don&rsquo;t have a finish date in mind. Let&rsquo;s see where the story takes us.
                 </p>
                 <h2>
+                    Which genre is this story?
+                </h2>
+                <p>
+                    I genuinely don&rsquo;st know. Let&rsquo;s find out together.
+                </p>
+                <h2>
                     Is this related to any startup?
                 </h2>
                 <p>
@@ -64,10 +70,10 @@ export default function Faq() {
                     You can email me at <a href='mailto:ben@benwerd.com'>ben@benwerd.com</a>.
                 </p>
                 <h2>
-                    Do you also write about technology?
+                    Do you also do serious technology work?
                 </h2>
                 <p>
-                    Yes,
+                    Yes. You can learn about that
                     {' '}
                     <Link href='https://werd.io'>
                         <a>over here</a>
