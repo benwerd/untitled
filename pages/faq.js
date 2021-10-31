@@ -65,6 +65,23 @@ export default function Faq() {
                     Remember when people built things on the web for fun?
                 </p>
                 <h2>
+                    So there&rsquo;s no business model?
+                </h2>
+                <p>
+                    Absolutely not. In fact, it&rsquo;s released under a Creative Commons license, so you could take the text and sell it yourself (as long as you include author attribution). If you feel like you should spend some money somewhere,
+                    {' '}
+                    <Link href='https://werd.io/content/all/?q=fairness+friday'>
+                        <a>check out my Fairness Friday posts</a>
+                    </Link>
+                    {' '}
+                    or donate to the
+                    {' '}
+                    <Link href='https://aclu.org'>
+                        <a>ACLU</a>
+                    </Link>
+                    .
+                </p>
+                <h2>
                     Can I make suggestions?
                 </h2>
                 <p>
@@ -75,12 +92,18 @@ export default function Faq() {
                     Do you also do serious technology work?
                 </h2>
                 <p>
-                    Yes, although I don&rsquo;t take myself too seriously. You can learn about that
+                    Yes. You can learn about that
                     {' '}
                     <Link href={authorUrl}>
                         <a>over here</a>
                     </Link>
                     .
+                </p>
+                <h2>
+                    Okay, but how can you expect anyone to take you seriously?
+                </h2>
+                <p>
+                    I don&rsquo;t!
                 </p>
             </section>
             <Footer />
