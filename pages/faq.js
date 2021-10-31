@@ -52,7 +52,7 @@ export default function Faq() {
                     Which genre is this story?
                 </h2>
                 <p>
-                    I genuinely don&rsquo;st know. Let&rsquo;s find out together.
+                    I genuinely don&rsquo;t know. Let&rsquo;s find out together.
                 </p>
                 <h2>
                     Is this related to any startup?
