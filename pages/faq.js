@@ -23,7 +23,9 @@ export default function Faq() {
                     {' '}
                     <a href='https://artisanal-artisan-3527.ck.page/ac21d80aa1'>email</a>,
                     {' '}
-                    <a href='/rss.xml'>RSS</a>,
+                    <Link href='/rss.xml'>
+                        <a>RSS</a>,
+                    </Link>
                     {' '}
                     or even by following
                     {' '}
