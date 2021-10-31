@@ -57,6 +57,12 @@ export default function Faq() {
                     I genuinely don&rsquo;t know. Let&rsquo;s find out together. You can expect wry sarcasm, serious points, and a pulp genre fiction sensibility.
                 </p>
                 <h2>
+                    Is this a first draft?
+                </h2>
+                <p>
+                    Sort of. I&rsquo;m publishing as I go, but I reserve the right to go back and revise at any time. When the story finishes, I&rsquo;ll begin editing. That&rsquo;s also how I write my blog, for what it&rsquo;s worth.
+                </p>
+                <h2>
                     Is this related to any startup?
                 </h2>
                 <p>
