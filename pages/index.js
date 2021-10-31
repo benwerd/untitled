@@ -2,34 +2,31 @@ import Head from 'next/head'
 import Link from 'next/link'
 import {getAllChapters, getAllChapterSlugs} from '../lib/chapters'
 import ChapterList from '../components/ChapterList'
-import { title, description } from '../lib/constants'
-import {buildRSS} from "../lib/feed";
+import { title, titleShort, description, subscribeUrl, authorUrl, authorName, githubUrl } from '../lib/constants'
+import { buildRSS } from '../lib/feed'
+import Footer from '../components/Footer'
+import HeaderBlock from '../components/HeaderBlock'
 
 export default function Home({ chapters }) {
   return (
     <>
-        <Head>
-            <title>
-                {title}
-            </title>
-            <meta name='description' content={description} />
-        </Head>
+        <HeaderBlock />
         <h1>
-            Untitled
+            {titleShort}
         </h1>
         <section className='explanation'>
             <p>
-                <em>Untitled</em> is a serial story about the future by
+                <em>{titleShort}</em> is a serial story about the future by
                 {' '}
-                <a href='https://werd.io'>Ben Werdmuller</a>.
+                <a href={authorUrl}>{authorName}</a>.
                 Season one begins on November 1, 2021.
             </p>
-            <p className='links'>
+            <div className='links'>
                 <Link as='/faq' href='/faq'>
                     <a>FAQ</a>
                 </Link>
                 {' '}|{' '}
-                <Link href='https://artisanal-artisan-3527.ck.page/ac21d80aa1'>
+                <Link href={subscribeUrl}>
                     <a>Subscribe by Email</a>
                 </Link>
                 {' '}|{' '}
@@ -37,13 +34,16 @@ export default function Home({ chapters }) {
                     <a>RSS</a>
                 </Link>
                 {' '}|{' '}
-                <a href='https://github.com/benwerd/untitled'>GitHub</a>
-            </p>
+                <Link href={githubUrl}>
+                    <a>GitHub</a>
+                </Link>
+            </div>
         </section>
         <section>
             <h2>Chapters</h2>
             <ChapterList chapters={chapters}/>
         </section>
+        <Footer />
     </>
   )
 }

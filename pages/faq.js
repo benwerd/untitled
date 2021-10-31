@@ -1,16 +1,15 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { title, description } from '../lib/constants'
+import { title, titleShort, description, subscribeUrl, authorUrl, authorEmail, githubUrl } from '../lib/constants'
+import TopNav from '../components/TopNav'
+import Footer from '../components/Footer'
+import HeaderBlock from '../components/HeaderBlock'
 
 export default function Faq() {
     return (
         <>
-            <Head>
-                <title>
-                    Frequently Asked Questions | {title}
-                </title>
-                <meta name='description' content={description} />
-            </Head>
+            <HeaderBlock pageTitle='Frequently Asked Questions' />
+            <TopNav />
             <section className='faq'>
                 <h1>
                     FAQ
@@ -19,9 +18,9 @@ export default function Faq() {
                     What is this?
                 </h2>
                 <p>
-                    <em>Untitled</em> is an experiment at writing a serial novel. You can subscribe to it via
+                    <em>{titleShort}</em> is an experiment at writing a serial novel. You can subscribe to it via
                     {' '}
-                    <a href='https://artisanal-artisan-3527.ck.page/ac21d80aa1'>email</a>,
+                    <a href={subscribeUrl}>email</a>,
                     {' '}
                     <Link href='/rss.xml'>
                         <a>RSS</a>
@@ -29,7 +28,10 @@ export default function Faq() {
                     {' '}
                     or even by following
                     {' '}
-                    <a href='https://github.com/benwerd/untitled'>the GitHub repository</a>.
+                    <Link href={githubUrl}>
+                        <a>the GitHub repository</a>
+                    </Link>
+                    .
                 </p>
                 <h2>
                     Is it really called Untitled?
@@ -52,7 +54,7 @@ export default function Faq() {
                     Which genre is this story?
                 </h2>
                 <p>
-                    I genuinely don&rsquo;t know. Let&rsquo;s find out together.
+                    I genuinely don&rsquo;t know. Let&rsquo;s find out together. You can expect wry sarcasm, serious points, and a pulp genre fiction sensibility.
                 </p>
                 <h2>
                     Is this related to any startup?
@@ -67,20 +69,21 @@ export default function Faq() {
                 </h2>
                 <p>
                     Respectfully, I ask that you don&rsquo;t. I won&rsquo;t read any story-related suggestions you send me. I&rsquo;d love your feedback though!
-                    You can email me at <a href='mailto:ben@benwerd.com'>ben@benwerd.com</a>.
+                    You can email me at <a href={'mailto:' + authorEmail}>{authorEmail}</a>.
                 </p>
                 <h2>
                     Do you also do serious technology work?
                 </h2>
                 <p>
-                    Yes. You can learn about that
+                    Yes, although I don&rsquo;t take myself too seriously. You can learn about that
                     {' '}
-                    <Link href='https://werd.io'>
+                    <Link href={authorUrl}>
                         <a>over here</a>
                     </Link>
                     .
                 </p>
             </section>
+            <Footer />
         </>
     )
 }

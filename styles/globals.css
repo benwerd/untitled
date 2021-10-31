@@ -61,3 +61,17 @@ p {
 .faq p {
   margin-bottom: 4rem;
 }
+
+.nav-bottom {
+  margin-top: 6rem;
+}
+
+.nav-bottom a {
+  padding-right: 3em;
+}
+
+footer {
+  margin-top: 10rem;
+  font-size: 0.8em;
+  color: #777;
+}
