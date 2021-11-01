@@ -17,6 +17,7 @@
 
 #rss
 /public/rss.xml
+/public/words.txt
 
 # misc
 .DS_Store

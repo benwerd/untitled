@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import {getAllChapters, getAllChapterSlugs} from '../lib/chapters'
+import { getAllChapters, getAllChapterSlugs, writeWordCountFile } from '../lib/chapters'
 import ChapterList from '../components/ChapterList'
 import { title, titleShort, description, subscribeUrl, authorUrl, authorName, githubUrl } from '../lib/constants'
 import { buildRSS } from '../lib/feed'
@@ -50,6 +50,7 @@ export default function Home({ chapters }) {
 
 export async function getStaticProps() {
     buildRSS(getAllChapters())
+    writeWordCountFile()
     return {
         props: {
             chapters: getAllChapterSlugs(),
